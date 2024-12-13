@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #08d665;
+}
+header {
+    background-color: rgba(51, 51, 51, 0.9);
+    border-bottom: 1px solid rgba(175, 175, 175, 0.6);
+    z-index: 100;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+header nav .logo {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bolder;
+}
+header nav .logo span {
+    color: #08d665;
+}
+header nav .link {
+    display: flex;
+}
+header nav .link li {
+    position: relative;
+    margin: 0 25px;
+    height: 80px;
+    line-height: 80px;
+}
+header nav .link li::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #08d665;
+    transition: 0.3s;
+}
+header nav .link li:hover::after {
+    width: 100%;
+}
+header nav .link li.active::after {
+    width: 100%;
+}
+header nav .link a {
+    color: #e0e0e0;
+    font-size: 1.5em;
+}
+header nav .social-link a i {
+    color: #08d665;
+    font-size: 45px;
+    margin-left: 24px;
+}
+header nav .social-link a i:hover {
+    color: #fff;
+}
+body {
+    background-image: url("BMW.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 2px 15px rgba(64,64,64,.7);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+thead {
+    background-color: rgba(51, 51, 51, 0.9);
+    border-bottom: 1px solid rgba(175, 175, 175, 0.6);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    height: 300px;
+    font-size: 1.7em;
+
+}
+
+th, td {
+    padding: 12px 15px;
+}
+
+tr {
+    border-bottom: 1px solid #dddddd;
+}
+tr:last-of-type {
+    border-bottom: 2px solid #04b258;
+}
+
+tr:hover {
+    background-color: #ffffff;
+}
+@media(max-width: 980px) {
+    header nav .link {
+        position: absolute;
+        top: 100px;
+        right: 0;
+        flex-direction: column;
+        background-color: black;
+        border-left: 1px solid #444;
+        width: 400px;
+        height: 100vh;
+    }
+
+    .text-content h1 {
+        font-size: 4em;
+    }
+
+    .text-content .job-title {
+        font-size: 2.5em;
+    }
+
+    .text-content p {
+        font-size: 2em;
+    }
+
+    .profile-img {
+        width: 50%;
+    }
+}
+@media(max-width: 768px) {
+    header nav .link {
+        width: 100vw;
+        height: auto;
+    }
+
+    header nav .link li {
+        margin: 10px 0;
+        height: auto;
+        line-height: normal;
+    }
+
+    .intro .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .text-content {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .text-content h1 {
+        font-size: 3em;
+    }
+
+    .text-content .job-title {
+        font-size: 2em;
+    }
+
+    .text-content p {
+        font-size: 1.5em;
+    }
+
+    .btn {
+        font-size: 1.5em;
+        padding: 10px 20px;
+    }
+}
+@media(max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header nav .logo {
+        font-size: 40px;
+    }
+
+    header nav .link {
+        width: 100%;
+        height: auto;
+    }
+}
+
